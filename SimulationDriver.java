@@ -17,8 +17,15 @@ public class SimulationDriver
 		vs.printResponses();
 		vs.printStatistics();		
 		
-		s[2].generateResponse();
-		s[3].generateResponse();
+		int r = 0;
+		for(int i = 0; i < s.length; i++)
+		{
+			r = (int)Math.round(Math.random());
+			if(r == 1)
+			{
+				s[i].generateResponse();
+			}
+		}
 		
 		vs.acceptResponses();
 		vs.printResponses(); 
